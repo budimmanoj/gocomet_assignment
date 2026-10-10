@@ -1,0 +1,60 @@
+# One practice scenario and its expected answer after each batch.
+# verdict: finding | no_finding | conflict | cannot_determine. Decoys and clean controls are no_finding: leave them
+#   out of the report or list them with verdict no_finding.
+# in_totals: true only for verdict finding. bucket: which answer-sheet total the amount adds to (overcharge,
+#   duplicate, waived_but_billed, late_fee_not_owed, cashback_owed, late_fees_avoided; none for expiry and anything
+#   that is not a finding). total_overpayment = the first four; total_savings adds cashback_owed and late_fees_avoided.
+# by_batch.expect: absent = must not be in that report; as_above = the answer above. learned_at_required: true = the
+#   answer changed because of feedback (data/scenarios/feedback/), so the item must carry learned_at.
+# probes: [feedback] = a key the learning component scores. finding: the report.json item.
+# No worked calculation and no explanation here: data/examples/*/EXPLANATION.md teach every class.
+scenario: sc-9bb38241
+key:
+  contract_id: TBX-US-EXP-01
+  period: 2035-Q2
+  credit_type: rebate
+class: cashback
+variant: CB-02
+decoy: true
+clean: false
+probes: []
+feedback_links: []
+verdict: no_finding
+amount_usd: null
+amount_range: null
+deadline: null
+in_totals: false
+bucket: none
+action:
+  supervised: none
+  autonomous: none
+missing_doc: null
+evidence:
+- doc: batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf
+  page: 3
+  quote: 1.1 Qualifying Spend. Qualifying Spend means freight charges (base freight, fuel, security surcharge and Annex D
+    accessorials) on invoices dated in the period, net of all credit notes dated in the period whatever invoice they reference
+    (rebate and improvement credits excepted). It excludes taxes (sales tax, GST), duties and disbursements, late fees, and
+    rebate or improvement credits. INR amounts are converted per invoice at the Annex F rate for the month of the invoice
+    date.
+- doc: batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf
+  page: 4
+  quote: '7.1 Volume rebate. The Carrier shall credit a rebate on each Quarter''s Qualifying Spend (QS) at the tier reached:
+    QS >= USD 79,000.00: 5%; QS >= USD 120,000.00: 7.5%; QS >= USD 202,000.00: 10%. The tier rate applies to all QS in the
+    Quarter.'
+deciding_clause:
+  doc: batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf
+  page: 3
+  quote: 1.1 Qualifying Spend. Qualifying Spend means freight charges (base freight, fuel, security surcharge and Annex D
+    accessorials) on invoices dated in the period, net of all credit notes dated in the period whatever invoice they reference
+    (rebate and improvement credits excepted). It excludes taxes (sales tax, GST), duties and disbursements, late fees, and
+    rebate or improvement credits. INR amounts are converted per invoice at the Annex F rate for the month of the invoice
+    date.
+by_batch:
+- after_batch: batch_01
+  as_of: '2035-05-31'
+  expect: as_above
+- after_batch: batch_02
+  as_of: '2035-09-30'
+  expect: as_above
+finding: null

@@ -1,0 +1,13 @@
+name: rebate inr without fx row
+mailbox: evals/mailboxes/w9_21_rebate_inr_without_fx_row
+as_of: '2041-07-31'
+mode: supervised
+expect:
+  key:
+    contract_id: VLM-DE-AIR-07
+    period: 2041-Q2
+    credit_type: rebate
+  verdict: cannot_determine
+  missing_doc: Annex F
+  action: draft:request_document
+why: 'Q2 includes a June INR invoice and Annex F has no June rate: ask Treasury'

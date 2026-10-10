@@ -1,0 +1,97 @@
+{
+ "batch": "batch_02",
+ "messages": [
+  {
+   "file": "0001.eml",
+   "message_id": "<a1b8816b0a535c8f92bcdbf9@caldrith.example>"
+  },
+  {
+   "file": "0002.eml",
+   "message_id": "<1002e19fc285d02e535bd449@caldrith.example>"
+  },
+  {
+   "file": "0003.eml",
+   "message_id": "<131173cdc98f1616b4fdb444@caldrith.example>"
+  },
+  {
+   "file": "0004.eml",
+   "message_id": "<1fdee63e0031f83bf8238e16@caldrith.example>"
+  },
+  {
+   "file": "0005.eml",
+   "message_id": "<721d7198492ca0bcca9e4534@caldrith.example>"
+  },
+  {
+   "file": "0006.eml",
+   "message_id": "<c004e5c5184d7537e2491e31@caldrith.example>"
+  },
+  {
+   "file": "0007.eml",
+   "message_id": "<e3802e73aa5af6e8aad75d55@caldrith.example>"
+  },
+  {
+   "file": "0008.eml",
+   "message_id": "<4941ec48987373448ab84650@ferrowyn.example>"
+  },
+  {
+   "file": "0009.eml",
+   "message_id": "<5fdb22adcb5a890df486b720@caldrith.example>"
+  },
+  {
+   "file": "0010.eml",
+   "message_id": "<aeed26a39f461f2134bdfb5b@caldrith.example>"
+  },
+  {
+   "file": "0011.eml",
+   "message_id": "<f2d33533561ade3ff7cf9df5@caldrith.example>"
+  },
+  {
+   "file": "0012.eml",
+   "message_id": "<52c63cc67e7055c36630d1f5@caldrith.example>"
+  },
+  {
+   "file": "0013.eml",
+   "message_id": "<f60a41cba1fd5c16509f9796@caldrith.example>"
+  },
+  {
+   "file": "0014.eml",
+   "message_id": "<3ead38d8e1e33a312a1881bd@caldrith.example>"
+  },
+  {
+   "file": "0015.eml",
+   "message_id": "<9e082f1e56a9969e81298d4d@caldrith.example>"
+  },
+  {
+   "file": "0016.eml",
+   "message_id": "<55fa78448f4ceb495a48de4c@caldrith.example>"
+  },
+  {
+   "file": "0017.eml",
+   "message_id": "<0b0f14652a0f7ef2021c6da9@caldrith.example>"
+  },
+  {
+   "file": "0018.eml",
+   "message_id": "<2551525b9f1a16200cb4f469@caldrith.example>"
+  },
+  {
+   "file": "0019.eml",
+   "message_id": "<4c93476d668bbffc0558675f@caldrith.example>"
+  },
+  {
+   "file": "0020.eml",
+   "message_id": "<e0d9511e462489bfba6eea40@caldrith.example>"
+  },
+  {
+   "file": "0021.eml",
+   "message_id": "<4f2856e1ee00e5f451734b42@caldrith.example>"
+  },
+  {
+   "file": "0022.eml",
+   "message_id": "<3aaa310fca72fe85efcd563f@caldrith.example>"
+  },
+  {
+   "file": "0023.eml",
+   "message_id": "<ebe68cd72847433862687426@ferrowyn.example>"
+  }
+ ]
+}

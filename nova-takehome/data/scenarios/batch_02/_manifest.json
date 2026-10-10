@@ -1,0 +1,153 @@
+{
+ "batch": "batch_02",
+ "messages": [
+  {
+   "file": "0001.eml",
+   "message_id": "<bcce7f171a530a606ad0e5a4@tarrowby.example>"
+  },
+  {
+   "file": "0002.eml",
+   "message_id": "<ca3bfef27e15bc57b3e1394f@tarrowby.example>"
+  },
+  {
+   "file": "0003.eml",
+   "message_id": "<5affd5169272d22a7975f8bb@tarrowby.example>"
+  },
+  {
+   "file": "0004.eml",
+   "message_id": "<c1709b792663699043a34208@tarrowby.example>"
+  },
+  {
+   "file": "0005.eml",
+   "message_id": "<300cf7ec2304c76e3ffe07ab@tarrowby.example>"
+  },
+  {
+   "file": "0006.eml",
+   "message_id": "<9e2e0068eaf623d3a43c47c1@tarrowby.example>"
+  },
+  {
+   "file": "0007.eml",
+   "message_id": "<e0f3c591c4d856f1a9f0aa56@tarrowby.example>"
+  },
+  {
+   "file": "0008.eml",
+   "message_id": "<e312dd73064ed40d96571a75@tarrowby.example>"
+  },
+  {
+   "file": "0009.eml",
+   "message_id": "<ce57f02e93e2631d0127a768@tarrowby.example>"
+  },
+  {
+   "file": "0010.eml",
+   "message_id": "<0bf36533bbf8d1e630f1e7df@tarrowby.example>"
+  },
+  {
+   "file": "0011.eml",
+   "message_id": "<7892c98ebbf346d9bbb071fb@tarrowby.example>"
+  },
+  {
+   "file": "0012.eml",
+   "message_id": "<2287dee57c81e2f47c9bacf5@tarrowby.example>"
+  },
+  {
+   "file": "0013.eml",
+   "message_id": "<d21de2cfd1dc43e41f966b20@tarrowby.example>"
+  },
+  {
+   "file": "0014.eml",
+   "message_id": "<d0000b3ac6ec4bd3846d1309@tarrowby.example>"
+  },
+  {
+   "file": "0015.eml",
+   "message_id": "<eefc05233736da8c1aeb1963@tarrowby.example>"
+  },
+  {
+   "file": "0016.eml",
+   "message_id": "<42f7bfb5c2bdf3c1a300876e@tarrowby.example>"
+  },
+  {
+   "file": "0017.eml",
+   "message_id": "<3688a0ddfad96c02ec1e17b1@tarrowby.example>"
+  },
+  {
+   "file": "0018.eml",
+   "message_id": "<1688e065950810548f82e83d@tarrowby.example>"
+  },
+  {
+   "file": "0019.eml",
+   "message_id": "<71508cbdf0698de47a9f0246@tarrowby.example>"
+  },
+  {
+   "file": "0020.eml",
+   "message_id": "<d44d8f284a6e679709fd389d@tarrowby.example>"
+  },
+  {
+   "file": "0021.eml",
+   "message_id": "<49f605359c3fda45d3d39d6e@tarrowby.example>"
+  },
+  {
+   "file": "0022.eml",
+   "message_id": "<747aa59a987be1190baeee6b@tarrowby.example>"
+  },
+  {
+   "file": "0023.eml",
+   "message_id": "<6400644fbb966032edd222c4@tarrowby.example>"
+  },
+  {
+   "file": "0024.eml",
+   "message_id": "<d1384f4c054ccfa4917c2bd3@tarrowby.example>"
+  },
+  {
+   "file": "0025.eml",
+   "message_id": "<6eb9dd5c2044eb6bb4f68795@tarrowby.example>"
+  },
+  {
+   "file": "0026.eml",
+   "message_id": "<d783eb31c5b1364792c9c632@tarrowby.example>"
+  },
+  {
+   "file": "0027.eml",
+   "message_id": "<50b0b1296dfa215e0acbef47@tarrowby.example>"
+  },
+  {
+   "file": "0028.eml",
+   "message_id": "<a7d54cbf10a6e2d80ffa6590@tarrowby.example>"
+  },
+  {
+   "file": "0029.eml",
+   "message_id": "<96505cacc8faf46797a2baa0@tarrowby.example>"
+  },
+  {
+   "file": "0030.eml",
+   "message_id": "<59e5c60d249413991c9b57b6@tarrowby.example>"
+  },
+  {
+   "file": "0031.eml",
+   "message_id": "<0d12c8e87535fb464db7e240@quillmere.example>"
+  },
+  {
+   "file": "0032.eml",
+   "message_id": "<71049cc5424324477d62bd8c@tarrowby.example>"
+  },
+  {
+   "file": "0033.eml",
+   "message_id": "<0ef9a3c73981101788d7b833@tarrowby.example>"
+  },
+  {
+   "file": "0034.eml",
+   "message_id": "<434b58c6e9a2af913d15c8ee@tarrowby.example>"
+  },
+  {
+   "file": "0035.eml",
+   "message_id": "<d75dbe8a4ab509b38d1ae57e@tarrowby.example>"
+  },
+  {
+   "file": "0036.eml",
+   "message_id": "<27aed84a6504aaa0c8c029a4@tarrowby.example>"
+  },
+  {
+   "file": "0037.eml",
+   "message_id": "<01b802edea1c261e81851304@quillmere.example>"
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "as_of": "2033-11-30",
+ "mode": "supervised",
+ "findings": [],
+ "portfolio": {
+  "cashback": [
+   {
+    "id": "cashback:TBX-US-EXP-E58/2033-Q2/rebate",
+    "class": "cashback",
+    "variant": "CB-01",
+    "contract_id": "TBX-US-EXP-E58",
+    "period": "2033-Q2",
+    "credit_type": "rebate",
+    "verdict": "finding",
+    "amount_usd": "3278.35",
+    "amount_range": null,
+    "deadline": null,
+    "action": "draft:claim_credit",
+    "confidence": 0.95,
+    "evidence": [
+     {
+      "doc": "batch_01/0002.eml#MSA-TBX-US-EXP-E58.pdf",
+      "page": 4,
+      "quote": "7.1 Volume rebate. The Carrier shall credit a rebate on each Quarter's Qualifying Spend (QS) at the tier reached: QS >= USD 55,000.00: 5%; QS >= USD 91,000.00: 7.5%; QS >= USD 150,000.00: 10%. The tier rate applies to all QS in the Quarter."
+     },
+     {
+      "doc": "batch_01/0002.eml#MSA-TBX-US-EXP-E58.pdf",
+      "page": 3,
+      "quote": "1.1 Qualifying Spend. Qualifying Spend means freight charges (base freight, fuel, security surcharge and Annex D accessorials) on invoices dated in the period, net of all credit notes dated in the period whatever invoice they reference (rebate and improvement credits excepted). It excludes taxes (sales tax, GST), duties and disbursements, late fees, and rebate or improvement credits. INR amounts are converted per invoice at the Annex F rate for the month of the invoice date."
+     }
+    ],
+    "missing_doc": null,
+    "supersedes": [],
+    "learned_at": null
+   },
+   {
+    "id": "cashback:TBX-US-EXP-E58/2033-Q3/rebate",
+    "class": "cashback",
+    "variant": "CB-02",
+    "contract_id": "TBX-US-EXP-E58",
+    "period": "2033-Q3",
+    "credit_type": "rebate",
+    "verdict": "no_finding",
+    "amount_usd": null,
+    "amount_range": null,
+    "deadline": null,
+    "action": "none",
+    "confidence": 0.9,
+    "evidence": [
+     {
+      "doc": "batch_01/0002.eml#MSA-TBX-US-EXP-E58.pdf",
+      "page": 3,
+      "quote": "1.1 Qualifying Spend. Qualifying Spend means freight charges (base freight, fuel, security surcharge and Annex D accessorials) on invoices dated in the period, net of all credit notes dated in the period whatever invoice they reference (rebate and improvement credits excepted). It excludes taxes (sales tax, GST), duties and disbursements, late fees, and rebate or improvement credits. INR amounts are converted per invoice at the Annex F rate for the month of the invoice date."
+     },
+     {
+      "doc": "batch_01/0002.eml#MSA-TBX-US-EXP-E58.pdf",
+      "page": 4,
+      "quote": "7.1 Volume rebate. The Carrier shall credit a rebate on each Quarter's Qualifying Spend (QS) at the tier reached: QS >= USD 55,000.00: 5%; QS >= USD 91,000.00: 7.5%; QS >= USD 150,000.00: 10%. The tier rate applies to all QS in the Quarter."
+     }
+    ],
+    "missing_doc": null,
+    "supersedes": [],
+    "learned_at": null
+   }
+  ],
+  "expiry": [],
+  "late_fee_risk": []
+ }
+}

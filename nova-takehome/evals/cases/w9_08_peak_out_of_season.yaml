@@ -1,0 +1,12 @@
+name: peak out of season
+mailbox: evals/mailboxes/w9_08_peak_out_of_season
+as_of: '2041-07-31'
+mode: supervised
+expect:
+  key:
+    invoice_id: VF-41-0108
+    class: overcharge
+  verdict: finding
+  amount_usd: '37.50'
+  action: draft:dispute
+why: peak applies to pickups September to November only

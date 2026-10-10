@@ -1,0 +1,15 @@
+name: paid invoice re-sent for payment, autonomous, no MSA in the mailbox
+mailbox: data/examples/duplicate/docs
+as_of: '2033-08-31'
+mode: autonomous
+expect:
+  key:
+    invoice_id: TX-US-2033-5511
+    class: duplicate
+  verdict: finding
+  amount_usd: '1259.23'
+  action: execute:dispute
+why: >-
+  The ledger shows TX-US-2033-5511 paid and the resend asks for payment again. The worked example says this passes
+  every unattended-action check. Caught a real bug: the harness held it for human_review because the partial mailbox
+  has no contract to read a Schedule 1 recipient from; a missing contract alone must not block the action.

@@ -1,0 +1,11 @@
+name: expiry notice deadline
+mailbox: evals/mailboxes/w9_10_expiry_notice_deadline
+as_of: '2041-08-15'
+mode: supervised
+expect:
+  key:
+    contract_id: VLM-DE-AIR-07
+  verdict: finding
+  deadline: '2041-10-02'
+  action: internal:alert
+why: auto-renews; 90 days' notice before 2041-12-31 = 2041-10-02

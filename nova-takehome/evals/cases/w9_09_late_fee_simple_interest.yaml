@@ -1,0 +1,12 @@
+name: late fee simple interest
+mailbox: evals/mailboxes/w9_09_late_fee_simple_interest
+as_of: '2041-07-31'
+mode: supervised
+expect:
+  key:
+    invoice_id: VF-41-0110
+    class: late_fee_not_owed
+  verdict: finding
+  amount_usd: '0.51'
+  action: draft:dispute
+why: contract says fees don't compound; month 2 is on principal only

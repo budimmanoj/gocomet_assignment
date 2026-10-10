@@ -1,0 +1,88 @@
+# One practice scenario and its expected answer after each batch.
+# verdict: finding | no_finding | conflict | cannot_determine. Decoys and clean controls are no_finding: leave them
+#   out of the report or list them with verdict no_finding.
+# in_totals: true only for verdict finding. bucket: which answer-sheet total the amount adds to (overcharge,
+#   duplicate, waived_but_billed, late_fee_not_owed, cashback_owed, late_fees_avoided; none for expiry and anything
+#   that is not a finding). total_overpayment = the first four; total_savings adds cashback_owed and late_fees_avoided.
+# by_batch.expect: absent = must not be in that report; as_above = the answer above. learned_at_required: true = the
+#   answer changed because of feedback (data/scenarios/feedback/), so the item must carry learned_at.
+# probes: [feedback] = a key the learning component scores. finding: the report.json item.
+# No worked calculation and no explanation here: data/examples/*/EXPLANATION.md teach every class.
+scenario: sc-28f910a1
+key:
+  invoice_id: TX-US-2035-0210
+  class: overcharge
+class: overcharge
+variant: FB-P1
+decoy: false
+clean: false
+probes:
+- feedback
+feedback_links:
+- fb-01-p1
+verdict: finding
+amount_usd: '36.07'
+amount_range: null
+deadline: null
+in_totals: true
+bucket: overcharge
+action:
+  supervised: draft:dispute
+  autonomous: execute:dispute
+missing_doc: null
+evidence:
+- doc: batch_01/0034.eml#TX-US-2035-0210.pdf
+  page: 1
+  quote: 1 TX13648356 2035-04-10 Air freight USC3-INS1 91 kg 5.03 457.73
+- doc: batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf
+  page: 8
+  quote: USC3-INS1 45-99.5 kg 4.71 4.69
+- doc: batch_01/0024.eml
+  page: 1
+  quote: 'USC3-INS1 45-99.5 kg: 5.03 USD'
+- doc: batch_01/0040.eml#tracking-2034-10-01.xlsx
+  page: 1
+  quote: TX13648356 | PICKED_UP | 2035-04-10 | USC3 | -
+deciding_clause:
+  doc: batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf
+  page: 3
+  quote: 3.5 Rate notices. The Carrier may change Annex A rates by written notice from an Authorised Person (rates), effective
+    on the date stated in the notice.
+by_batch:
+- after_batch: batch_01
+  as_of: '2035-05-31'
+  expect: as_above
+- after_batch: batch_02
+  as_of: '2035-09-30'
+  expect: absent
+finding:
+  id: overcharge:TX-US-2035-0210
+  class: overcharge
+  variant: FB-P1
+  invoice_id: TX-US-2035-0210
+  verdict: finding
+  amount_usd: '36.07'
+  amount_range: null
+  deadline: null
+  action: draft:dispute
+  confidence: 0.95
+  evidence:
+  - doc: batch_01/0034.eml#TX-US-2035-0210.pdf
+    page: 1
+    quote: 1 TX13648356 2035-04-10 Air freight USC3-INS1 91 kg 5.03 457.73
+  - doc: batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf
+    page: 8
+    quote: USC3-INS1 45-99.5 kg 4.71 4.69
+  - doc: batch_01/0024.eml
+    page: 1
+    quote: 'USC3-INS1 45-99.5 kg: 5.03 USD'
+  - doc: batch_01/0040.eml#tracking-2034-10-01.xlsx
+    page: 1
+    quote: TX13648356 | PICKED_UP | 2035-04-10 | USC3 | -
+  - doc: batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf
+    page: 3
+    quote: 3.5 Rate notices. The Carrier may change Annex A rates by written notice from an Authorised Person (rates), effective
+      on the date stated in the notice.
+  missing_doc: null
+  supersedes: []
+  learned_at: null

@@ -1,0 +1,12 @@
+name: storage days
+mailbox: evals/mailboxes/w9_06_storage_days
+as_of: '2041-07-31'
+mode: supervised
+expect:
+  key:
+    invoice_id: VF-41-0106
+    class: overcharge
+  verdict: finding
+  amount_usd: '94.50'
+  action: draft:dispute
+why: 'arrived 06-12, delivered 06-17, 2 free days: 3 days, billed 6'

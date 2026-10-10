@@ -1,0 +1,77 @@
+{
+ "batch": "batch_01",
+ "messages": [
+  {
+   "file": "0001.eml",
+   "message_id": "<ffc340a19058e8de76dada5f@caldrith.example>"
+  },
+  {
+   "file": "0002.eml",
+   "message_id": "<881eb141a5d57ba006272220@caldrith.example>"
+  },
+  {
+   "file": "0003.eml",
+   "message_id": "<afda92c49bbf3faebd33de4a@caldrith.example>"
+  },
+  {
+   "file": "0004.eml",
+   "message_id": "<01b73ccbb3d37ac43b5f83b8@caldrith.example>"
+  },
+  {
+   "file": "0005.eml",
+   "message_id": "<8cd2032159ed596bcfec947a@caldrith.example>"
+  },
+  {
+   "file": "0006.eml",
+   "message_id": "<a1c4951b8174c3ecec43bd0b@ferrowyn.example>"
+  },
+  {
+   "file": "0007.eml",
+   "message_id": "<3f317a5f7ee59cd19aab81f1@caldrith.example>"
+  },
+  {
+   "file": "0008.eml",
+   "message_id": "<9d3880794b4f55d7c6c155d2@caldrith.example>"
+  },
+  {
+   "file": "0009.eml",
+   "message_id": "<a771237b607860312108e63f@caldrith.example>"
+  },
+  {
+   "file": "0010.eml",
+   "message_id": "<31824510a384f7a5587c3595@caldrith.example>"
+  },
+  {
+   "file": "0011.eml",
+   "message_id": "<c6134f0d3fe99f4df8face28@caldrith.example>"
+  },
+  {
+   "file": "0012.eml",
+   "message_id": "<b88d2770ddc91aa2b263c449@caldrith.example>"
+  },
+  {
+   "file": "0013.eml",
+   "message_id": "<9ead3ab3905f2d8445098c84@caldrith.example>"
+  },
+  {
+   "file": "0014.eml",
+   "message_id": "<f281e7bd69189288d20e806c@caldrith.example>"
+  },
+  {
+   "file": "0015.eml",
+   "message_id": "<39e03c8544d0243f55e5df0d@caldrith.example>"
+  },
+  {
+   "file": "0016.eml",
+   "message_id": "<5f221a55545d223fb75576e6@caldrith.example>"
+  },
+  {
+   "file": "0017.eml",
+   "message_id": "<4e35fe84892c9f983f640d21@caldrith.example>"
+  },
+  {
+   "file": "0018.eml",
+   "message_id": "<901732e5e78c1e6444c3bc88@ferrowyn.example>"
+  }
+ ]
+}

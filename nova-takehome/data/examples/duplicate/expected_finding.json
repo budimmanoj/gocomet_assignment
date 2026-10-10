@@ -1,0 +1,70 @@
+{
+ "as_of": "2033-08-31",
+ "mode": "supervised",
+ "findings": [
+  {
+   "id": "duplicate:TX-US-2033-5511",
+   "class": "duplicate",
+   "variant": "DU-01",
+   "invoice_id": "TX-US-2033-5511",
+   "verdict": "finding",
+   "amount_usd": "1259.23",
+   "amount_range": null,
+   "deadline": null,
+   "action": "draft:dispute",
+   "confidence": 0.95,
+   "evidence": [
+    {
+     "doc": "batch_01/0006.eml#ap-register-2033-02-28.xlsx",
+     "page": 1,
+     "quote": "TX-US-2033-5511 | 2033-01-31 | due 2033-03-02 | USD 1259.23 | paid | 2033-02-07"
+    },
+    {
+     "doc": "batch_01/0004.eml",
+     "page": 1,
+     "quote": "Please process payment at your earliest convenience."
+    }
+   ],
+   "missing_doc": null,
+   "supersedes": [],
+   "learned_at": null
+  },
+  {
+   "id": "duplicate:TX-US-2033-5514",
+   "class": "duplicate",
+   "variant": "DU-05",
+   "invoice_id": "TX-US-2033-5514",
+   "verdict": "no_finding",
+   "amount_usd": null,
+   "amount_range": null,
+   "deadline": null,
+   "action": "none",
+   "confidence": 0.9,
+   "evidence": [
+    {
+     "doc": "batch_02/0002.eml#AWB-TE19536828.pdf",
+     "page": 1,
+     "quote": "Total pieces 4 | Total chargeable weight 343 kg"
+    },
+    {
+     "doc": "batch_02/0001.eml#TX-US-2033-5512.pdf",
+     "page": 1,
+     "quote": "Air freight (MAWB TE19536828) TE19536828-H1 USW2-INE2 14 May 2033 981.60 240 kg 4.09"
+    },
+    {
+     "doc": "batch_02/0002.eml#TX-US-2033-5514.pdf",
+     "page": 1,
+     "quote": "Air freight (MAWB TE19536828) TE19536828-H2 USW2-INE2 14 May 2033 421.27 103 kg 4.09"
+    }
+   ],
+   "missing_doc": null,
+   "supersedes": [],
+   "learned_at": null
+  }
+ ],
+ "portfolio": {
+  "cashback": [],
+  "expiry": [],
+  "late_fee_risk": []
+ }
+}

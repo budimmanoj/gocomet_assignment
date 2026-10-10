@@ -1,0 +1,14 @@
+name: feedback confirms authority
+mailbox: evals/mailboxes/w9_15_feedback_confirms_authority
+as_of: '2041-07-31'
+mode: supervised
+expect:
+  key:
+    invoice_id: VF-41-0116
+    class: waived_but_billed
+  verdict: finding
+  amount_usd: '64.00'
+  action: draft:dispute
+why: Lotte Haas isn't on Schedule 1, but AP confirmed her waiver authority
+feedback:
+  batch_01: evals/feedback/w9_15_feedback_confirms_authority_batch_01.json

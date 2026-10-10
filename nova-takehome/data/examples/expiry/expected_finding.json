@@ -1,0 +1,33 @@
+{
+ "as_of": "2034-02-28",
+ "mode": "supervised",
+ "findings": [],
+ "portfolio": {
+  "cashback": [],
+  "expiry": [
+   {
+    "id": "expiry:TBX-US-EXP-E24",
+    "class": "expiry",
+    "variant": "EX-01",
+    "contract_id": "TBX-US-EXP-E24",
+    "verdict": "finding",
+    "amount_usd": null,
+    "amount_range": null,
+    "deadline": "2034-03-20",
+    "action": "internal:alert",
+    "confidence": 0.95,
+    "evidence": [
+     {
+      "doc": "batch_01/0002.eml#MSA-TBX-US-EXP-E24.pdf",
+      "page": 3,
+      "quote": "2.2 Initial term. The initial term is 12 months, ending on 2034-03-20."
+     }
+    ],
+    "missing_doc": null,
+    "supersedes": [],
+    "learned_at": null
+   }
+  ],
+  "late_fee_risk": []
+ }
+}

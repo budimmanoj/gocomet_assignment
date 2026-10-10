@@ -1,0 +1,80 @@
+{
+ "as_of": "2034-02-28",
+ "mode": "supervised",
+ "findings": [
+  {
+   "id": "waived_but_billed:TX-US-2033-5337",
+   "class": "waived_but_billed",
+   "variant": "WB-01",
+   "invoice_id": "TX-US-2033-5337",
+   "verdict": "finding",
+   "amount_usd": "133.44",
+   "amount_range": null,
+   "deadline": null,
+   "action": "draft:dispute",
+   "confidence": 0.95,
+   "evidence": [
+    {
+     "doc": "batch_01/0004.eml",
+     "page": 1,
+     "quote": "Following our call, we waive the Delivery fee on AWB TE97049901."
+    },
+    {
+     "doc": "batch_01/0002.eml#MSA-TBX-US-EXP-E49.pdf",
+     "page": 11,
+     "quote": "Elspeth Iyengar, Customer Finance Lead, TBX-US: waivers, payment_terms <elspeth.iyengar@tarrowby.example>"
+    },
+    {
+     "doc": "batch_01/0005.eml#TX-US-2033-5337.pdf",
+     "page": 1,
+     "quote": "4 TE97049901 2033-06-18 Delivery fee USE2-INN1 1 shpt 133.44 133.44"
+    },
+    {
+     "doc": "batch_01/0002.eml#MSA-TBX-US-EXP-E49.pdf",
+     "page": 4,
+     "quote": "11.1 Waiver authority. A charge may be waived only in writing by a person listed in Schedule 1 for waivers. Schedule 1 is exhaustive."
+    }
+   ],
+   "missing_doc": null,
+   "supersedes": [],
+   "learned_at": null
+  },
+  {
+   "id": "waived_but_billed:TX-US-2034-5561",
+   "class": "waived_but_billed",
+   "variant": "WB-01",
+   "invoice_id": "TX-US-2034-5561",
+   "verdict": "no_finding",
+   "amount_usd": null,
+   "amount_range": null,
+   "deadline": null,
+   "action": "none",
+   "confidence": 0.9,
+   "evidence": [
+    {
+     "doc": "batch_02/0002.eml",
+     "page": 1,
+     "quote": "Thanks for flagging this. We waive the Delivery fee on AWB TE33628218 in full."
+    },
+    {
+     "doc": "batch_02/0005.eml#TX-US-2034-5561.pdf",
+     "page": 1,
+     "quote": "Delivery fee TE10597216 USE2-USC1 23 Jan 2034 133.44 1 shpt 133.44"
+    },
+    {
+     "doc": "batch_01/0002.eml#MSA-TBX-US-EXP-E49.pdf",
+     "page": 4,
+     "quote": "11.2 Scope of waiver. A waiver applies only to the charges and shipments it names. No waiver is a waiver of any later charge, and no course of dealing creates one."
+    }
+   ],
+   "missing_doc": null,
+   "supersedes": [],
+   "learned_at": null
+  }
+ ],
+ "portfolio": {
+  "cashback": [],
+  "expiry": [],
+  "late_fee_risk": []
+ }
+}

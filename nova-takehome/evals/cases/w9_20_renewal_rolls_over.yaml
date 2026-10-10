@@ -1,0 +1,11 @@
+name: renewal rolls over
+mailbox: evals/mailboxes/w9_20_renewal_rolls_over
+as_of: '2041-09-15'
+mode: supervised
+expect:
+  key:
+    contract_id: VLM-DE-AIR-07
+  verdict: finding
+  deadline: '2041-11-01'
+  action: internal:alert
+why: 'rolls over unless notice at least 60 days before 2041-12-31: deadline 2041-11-01'

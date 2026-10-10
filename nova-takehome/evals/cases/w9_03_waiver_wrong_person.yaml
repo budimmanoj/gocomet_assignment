@@ -1,0 +1,10 @@
+name: waiver wrong person
+mailbox: evals/mailboxes/w9_03_waiver_wrong_person
+as_of: '2041-07-31'
+mode: supervised
+expect:
+  key:
+    invoice_id: VF-41-0103
+    class: waived_but_billed
+  verdict: no_finding
+why: Ilka Brandt is notices only; Schedule 1 is exhaustive

@@ -1,0 +1,12 @@
+name: duplicate partly credited
+mailbox: evals/mailboxes/w9_11_duplicate_partly_credited
+as_of: '2041-07-31'
+mode: supervised
+expect:
+  key:
+    invoice_id: VF-41-0112
+    class: duplicate
+  verdict: finding
+  amount_usd: '315.00'
+  action: draft:dispute
+why: freight billed twice; 300.00 credited, so the rest is still owed back

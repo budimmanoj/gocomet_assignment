@@ -1,0 +1,10 @@
+name: rebill after full credit
+mailbox: evals/mailboxes/w9_18_rebill_after_full_credit
+as_of: '2041-07-31'
+mode: supervised
+expect:
+  key:
+    invoice_id: VF-41-0120
+    class: duplicate
+  verdict: no_finding
+why: VF-41-0119 was credited in full before VF-41-0120 billed the shipment again

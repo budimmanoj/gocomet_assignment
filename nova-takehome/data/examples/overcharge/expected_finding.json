@@ -1,0 +1,85 @@
+{
+ "as_of": "2032-08-31",
+ "mode": "supervised",
+ "findings": [
+  {
+   "id": "overcharge:TX-US-2032-5394",
+   "class": "overcharge",
+   "variant": "OC-01",
+   "invoice_id": "TX-US-2032-5394",
+   "verdict": "finding",
+   "amount_usd": "196.92",
+   "amount_range": null,
+   "deadline": null,
+   "action": "draft:dispute",
+   "confidence": 0.95,
+   "evidence": [
+    {
+     "doc": "batch_01/0003.eml#TX-US-2032-5394.pdf",
+     "page": 1,
+     "quote": "1 TE56915687 2031-12-25 Air freight USE2-INE2 241 kg 6.69 1612.29"
+    },
+    {
+     "doc": "batch_01/0002.eml#MSA-TBX-US-EXP-E60.pdf",
+     "page": 8,
+     "quote": "USE2-INE2 100-299.5 kg 6.01 6.16"
+    },
+    {
+     "doc": "batch_01/0002.eml#MSA-TBX-US-EXP-E60.pdf",
+     "page": 3,
+     "quote": "3.2 Pricing date. Each shipment is priced at the rates, surcharges and fees in force on its Pickup Date."
+    },
+    {
+     "doc": "batch_01/0005.eml#tracking-2031-07-01.xlsx",
+     "page": 1,
+     "quote": "TE56915687 | PICKED_UP | 2031-12-25 | USE2 | -"
+    }
+   ],
+   "missing_doc": null,
+   "supersedes": [],
+   "learned_at": null
+  },
+  {
+   "id": "overcharge:TX-US-2032-5397",
+   "class": "overcharge",
+   "variant": "OC-01",
+   "invoice_id": "TX-US-2032-5397",
+   "verdict": "no_finding",
+   "amount_usd": null,
+   "amount_range": null,
+   "deadline": null,
+   "action": "none",
+   "confidence": 0.9,
+   "evidence": [
+    {
+     "doc": "batch_01/0004.eml#TX-US-2032-5397.pdf",
+     "page": 1,
+     "quote": "1 TE68271803 2032-01-18 Air freight USE2-INE2 44 kg 7.73 340.12"
+    },
+    {
+     "doc": "batch_01/0002.eml#MSA-TBX-US-EXP-E60.pdf",
+     "page": 8,
+     "quote": "USE2-INE2 0-44.5 kg 7.73 7.93"
+    },
+    {
+     "doc": "batch_01/0002.eml#MSA-TBX-US-EXP-E60.pdf",
+     "page": 8,
+     "quote": "USE2-INE2 45-99.5 kg 6.81 6.99"
+    },
+    {
+     "doc": "batch_01/0002.eml#MSA-TBX-US-EXP-E60.pdf",
+     "page": 3,
+     "quote": "3.4 Minimum charge. The per-shipment minimum in Annex A applies where rate x chargeable weight is lower. Each shipment is rated at the weight band that contains its chargeable weight."
+    }
+   ],
+   "missing_doc": null,
+   "supersedes": [],
+   "learned_at": null
+  }
+ ],
+ "portfolio": {
+  "cashback": [],
+  "expiry": [],
+  "late_fee_risk": []
+ }
+}

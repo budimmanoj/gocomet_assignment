@@ -1,0 +1,47 @@
+{
+ "schema_version": "1.0",
+ "world": "W1",
+ "after_batch": "batch_01",
+ "decided_at": "2035-06-02T10:15:00Z",
+ "decided_by": {
+  "name": "Isolde Pembroke",
+  "role": "AP Manager",
+  "entity": "QMP-US"
+ },
+ "items": [
+  {
+   "item_id": "fb-01-p1",
+   "finding_key": {
+    "invoice_id": "TX-US-2035-0210",
+    "class": "overcharge"
+   },
+   "solicited": false,
+   "decision": "close",
+   "fact": {
+    "type": "rate_accepted",
+    "subject": {
+     "contract_id": "TBX-US-EXP-01",
+     "lane": "USC3-INS1"
+    },
+    "value": {
+     "source": "rate notice",
+     "sent_by": "Joaquin Rathbone",
+     "sent_on": "2035-03-06",
+     "effective_from": "2035-03-13",
+     "effective_to": "2035-09-25"
+    },
+    "evidence": "The carrier's Pricing Manager confirmed the notice by phone to AP"
+   },
+   "scope": {
+    "kind": "standing",
+    "applies_to": {
+     "contract_id": "TBX-US-EXP-01",
+     "lane": "USC3-INS1"
+    },
+    "valid_from": "2035-03-13",
+    "valid_to": "2035-09-25"
+   },
+   "note": "The carrier confirms the USC3-INS1 rate notice from Joaquin Rathbone is valid and we accept those rates for lane USC3-INS1 from 2035-03-13 to 2035-09-25. Close the dispute on this invoice."
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+name: delivery not performed
+mailbox: evals/mailboxes/w9_07_delivery_not_performed
+as_of: '2041-07-31'
+mode: supervised
+expect:
+  key:
+    invoice_id: VF-41-0107
+    class: overcharge
+  verdict: finding
+  amount_usd: '64.00'
+  action: draft:dispute
+why: 'COLLECTED_BY_CONSIGNEE, no DELIVERED: clause 6.2'

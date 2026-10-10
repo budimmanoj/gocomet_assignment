@@ -1,0 +1,10 @@
+name: band edge clean
+mailbox: evals/mailboxes/w9_02_band_edge_clean
+as_of: '2041-07-31'
+mode: supervised
+expect:
+  key:
+    invoice_id: VF-41-0102
+    class: overcharge
+  verdict: no_finding
+why: 44.5 kg is inside 0-44.5; 5.40 is right

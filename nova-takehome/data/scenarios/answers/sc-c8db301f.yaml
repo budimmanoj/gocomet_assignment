@@ -1,0 +1,81 @@
+# One practice scenario and its expected answer after each batch.
+# verdict: finding | no_finding | conflict | cannot_determine. Decoys and clean controls are no_finding: leave them
+#   out of the report or list them with verdict no_finding.
+# in_totals: true only for verdict finding. bucket: which answer-sheet total the amount adds to (overcharge,
+#   duplicate, waived_but_billed, late_fee_not_owed, cashback_owed, late_fees_avoided; none for expiry and anything
+#   that is not a finding). total_overpayment = the first four; total_savings adds cashback_owed and late_fees_avoided.
+# by_batch.expect: absent = must not be in that report; as_above = the answer above. learned_at_required: true = the
+#   answer changed because of feedback (data/scenarios/feedback/), so the item must carry learned_at.
+# probes: [feedback] = a key the learning component scores. finding: the report.json item.
+# No worked calculation and no explanation here: data/examples/*/EXPLANATION.md teach every class.
+scenario: sc-c8db301f
+key:
+  invoice_id: TXI/35-36/0030
+  class: overcharge
+class: overcharge
+variant: OC-01
+decoy: false
+clean: false
+probes: []
+feedback_links: []
+verdict: finding
+amount_usd: '383.13'
+amount_range: null
+deadline: null
+in_totals: true
+bucket: overcharge
+action:
+  supervised: draft:dispute
+  autonomous: execute:dispute
+missing_doc: null
+evidence:
+- doc: batch_02/0026.eml#TXI-35-36-0030.pdf
+  page: 1
+  quote: TX15472186 Air freight 2035-08-13 INN3-USC3 996531 396 kg 584.72 231549.12
+- doc: batch_01/0008.eml#MSA-TBX-IN-EXP-01.pdf
+  page: 8
+  quote: INN3-USC3 300+ kg 480.99 519.17
+- doc: batch_01/0008.eml#MSA-TBX-IN-EXP-01.pdf
+  page: 3
+  quote: 3.2 Pricing date. Each shipment is priced at the rates, surcharges and fees in force on its Pickup Date.
+- doc: batch_02/0036.eml#tracking-2035-06-01.xlsx
+  page: 1
+  quote: TX15472186 | PICKED_UP | 2035-08-13 | INN3 | -
+deciding_clause:
+  doc: batch_01/0008.eml#MSA-TBX-IN-EXP-01.pdf
+  page: 3
+  quote: 3.2 Pricing date. Each shipment is priced at the rates, surcharges and fees in force on its Pickup Date.
+by_batch:
+- after_batch: batch_01
+  as_of: '2035-05-31'
+  expect: absent
+- after_batch: batch_02
+  as_of: '2035-09-30'
+  expect: as_above
+finding:
+  id: overcharge:TXI/35-36/0030
+  class: overcharge
+  variant: OC-01
+  invoice_id: TXI/35-36/0030
+  verdict: finding
+  amount_usd: '383.13'
+  amount_range: null
+  deadline: null
+  action: draft:dispute
+  confidence: 0.95
+  evidence:
+  - doc: batch_02/0026.eml#TXI-35-36-0030.pdf
+    page: 1
+    quote: TX15472186 Air freight 2035-08-13 INN3-USC3 996531 396 kg 584.72 231549.12
+  - doc: batch_01/0008.eml#MSA-TBX-IN-EXP-01.pdf
+    page: 8
+    quote: INN3-USC3 300+ kg 480.99 519.17
+  - doc: batch_01/0008.eml#MSA-TBX-IN-EXP-01.pdf
+    page: 3
+    quote: 3.2 Pricing date. Each shipment is priced at the rates, surcharges and fees in force on its Pickup Date.
+  - doc: batch_02/0036.eml#tracking-2035-06-01.xlsx
+    page: 1
+    quote: TX15472186 | PICKED_UP | 2035-08-13 | INN3 | -
+  missing_doc: null
+  supersedes: []
+  learned_at: null

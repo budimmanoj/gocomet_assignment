@@ -1,0 +1,75 @@
+# One practice scenario and its expected answer after each batch.
+# verdict: finding | no_finding | conflict | cannot_determine. Decoys and clean controls are no_finding: leave them
+#   out of the report or list them with verdict no_finding.
+# in_totals: true only for verdict finding. bucket: which answer-sheet total the amount adds to (overcharge,
+#   duplicate, waived_but_billed, late_fee_not_owed, cashback_owed, late_fees_avoided; none for expiry and anything
+#   that is not a finding). total_overpayment = the first four; total_savings adds cashback_owed and late_fees_avoided.
+# by_batch.expect: absent = must not be in that report; as_above = the answer above. learned_at_required: true = the
+#   answer changed because of feedback (data/scenarios/feedback/), so the item must carry learned_at.
+# probes: [feedback] = a key the learning component scores. finding: the report.json item.
+# No worked calculation and no explanation here: data/examples/*/EXPLANATION.md teach every class.
+scenario: sc-f9cfdf2a
+key:
+  invoice_id: TX-US-2035-0252
+  class: late_fee_risk
+class: late_fee_risk
+variant: LF-03
+decoy: false
+clean: false
+probes: []
+feedback_links: []
+verdict: finding
+amount_usd: '19.61'
+amount_range: null
+deadline: '2035-10-06'
+in_totals: true
+bucket: late_fees_avoided
+action:
+  supervised: internal:payment_reminder
+  autonomous: internal:payment_reminder
+missing_doc: null
+evidence:
+- doc: batch_02/0037.eml#ap-register-2035-09-30.xlsx
+  page: 1
+  quote: TX-US-2035-0252 | 2035-08-22 | due 2035-10-06 | USD 990.33 | open | -
+- doc: batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf
+  page: 4
+  quote: 10.2 Late fee. Undisputed amounts unpaid more than 0 days after the due date bear a late fee of 1.98% per month or
+    part thereof. days_late = paid date - due date; no fee is due if days_late <= 0; otherwise n = ceil(days_late / 30) fee
+    months, each fee_i = 1.98% x base_i rounded to cents, base_i per clause 10.3.
+deciding_clause:
+  doc: batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf
+  page: 4
+  quote: 10.2 Late fee. Undisputed amounts unpaid more than 0 days after the due date bear a late fee of 1.98% per month or
+    part thereof. days_late = paid date - due date; no fee is due if days_late <= 0; otherwise n = ceil(days_late / 30) fee
+    months, each fee_i = 1.98% x base_i rounded to cents, base_i per clause 10.3.
+by_batch:
+- after_batch: batch_01
+  as_of: '2035-05-31'
+  expect: absent
+- after_batch: batch_02
+  as_of: '2035-09-30'
+  expect: as_above
+finding:
+  id: late_fee_risk:TX-US-2035-0252
+  class: late_fee_risk
+  variant: LF-03
+  invoice_id: TX-US-2035-0252
+  verdict: finding
+  amount_usd: '19.61'
+  amount_range: null
+  deadline: '2035-10-06'
+  action: internal:payment_reminder
+  confidence: 0.95
+  evidence:
+  - doc: batch_02/0037.eml#ap-register-2035-09-30.xlsx
+    page: 1
+    quote: TX-US-2035-0252 | 2035-08-22 | due 2035-10-06 | USD 990.33 | open | -
+  - doc: batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf
+    page: 4
+    quote: 10.2 Late fee. Undisputed amounts unpaid more than 0 days after the due date bear a late fee of 1.98% per month
+      or part thereof. days_late = paid date - due date; no fee is due if days_late <= 0; otherwise n = ceil(days_late / 30)
+      fee months, each fee_i = 1.98% x base_i rounded to cents, base_i per clause 10.3.
+  missing_doc: null
+  supersedes: []
+  learned_at: null

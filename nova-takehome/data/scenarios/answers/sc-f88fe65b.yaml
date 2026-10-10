@@ -1,0 +1,78 @@
+# One practice scenario and its expected answer after each batch.
+# verdict: finding | no_finding | conflict | cannot_determine. Decoys and clean controls are no_finding: leave them
+#   out of the report or list them with verdict no_finding.
+# in_totals: true only for verdict finding. bucket: which answer-sheet total the amount adds to (overcharge,
+#   duplicate, waived_but_billed, late_fee_not_owed, cashback_owed, late_fees_avoided; none for expiry and anything
+#   that is not a finding). total_overpayment = the first four; total_savings adds cashback_owed and late_fees_avoided.
+# by_batch.expect: absent = must not be in that report; as_above = the answer above. learned_at_required: true = the
+#   answer changed because of feedback (data/scenarios/feedback/), so the item must carry learned_at.
+# probes: [feedback] = a key the learning component scores. finding: the report.json item.
+# No worked calculation and no explanation here: data/examples/*/EXPLANATION.md teach every class.
+scenario: sc-f88fe65b
+key:
+  invoice_id: TX-US-2035-0236
+  class: overcharge
+class: overcharge
+variant: OC-02
+decoy: false
+clean: false
+probes: []
+feedback_links: []
+verdict: finding
+amount_usd: '124.02'
+amount_range: null
+deadline: null
+in_totals: true
+bucket: overcharge
+action:
+  supervised: draft:dispute
+  autonomous: execute:dispute
+missing_doc: null
+evidence:
+- doc: batch_02/0011.eml#TX-US-2035-0236.pdf
+  page: 1
+  quote: 5 TX69361253 2035-06-15 DG handling USS2-INW2 1 shpt 124.02 124.02
+- doc: batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf
+  page: 3
+  quote: 5.2 Dry ice. Dry ice (UN1845) used solely as a refrigerant for non-dangerous goods is billed at the Dry Ice Handling
+    Fee in Annex D, once per shipment (not per package or per kg), and does not attract the Dangerous Goods Fee.
+- doc: batch_02/0011.eml#DGD-TX69361253.pdf
+  page: 1
+  quote: UN1845 Dry ice 10.4 kg - refrigerant only
+deciding_clause:
+  doc: batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf
+  page: 3
+  quote: 5.2 Dry ice. Dry ice (UN1845) used solely as a refrigerant for non-dangerous goods is billed at the Dry Ice Handling
+    Fee in Annex D, once per shipment (not per package or per kg), and does not attract the Dangerous Goods Fee.
+by_batch:
+- after_batch: batch_01
+  as_of: '2035-05-31'
+  expect: absent
+- after_batch: batch_02
+  as_of: '2035-09-30'
+  expect: as_above
+finding:
+  id: overcharge:TX-US-2035-0236
+  class: overcharge
+  variant: OC-02
+  invoice_id: TX-US-2035-0236
+  verdict: finding
+  amount_usd: '124.02'
+  amount_range: null
+  deadline: null
+  action: draft:dispute
+  confidence: 0.95
+  evidence:
+  - doc: batch_02/0011.eml#TX-US-2035-0236.pdf
+    page: 1
+    quote: 5 TX69361253 2035-06-15 DG handling USS2-INW2 1 shpt 124.02 124.02
+  - doc: batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf
+    page: 3
+    quote: 5.2 Dry ice. Dry ice (UN1845) used solely as a refrigerant for non-dangerous goods is billed at the Dry Ice Handling
+      Fee in Annex D, once per shipment (not per package or per kg), and does not attract the Dangerous Goods Fee.
+  - doc: batch_02/0011.eml#DGD-TX69361253.pdf
+    page: 1
+    quote: UN1845 Dry ice 10.4 kg - refrigerant only
+  missing_doc: null
+  supersedes: []
+  learned_at: null

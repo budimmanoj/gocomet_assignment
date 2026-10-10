@@ -1,0 +1,43 @@
+{
+ "as_of": "2032-08-31",
+ "mode": "supervised",
+ "findings": [
+  {
+   "id": "duplicate:TX-US-2032-5441",
+   "class": "duplicate",
+   "variant": "DU-03",
+   "invoice_id": "TX-US-2032-5441",
+   "verdict": "finding",
+   "amount_usd": "42.08",
+   "amount_range": null,
+   "deadline": null,
+   "action": "draft:dispute",
+   "confidence": 0.95,
+   "evidence": [
+    {
+     "doc": "batch_01/0003.eml#TX-US-2032-5436.pdf",
+     "page": 1,
+     "quote": "3 TE16812897 2032-01-22 Security surcharge USC3-USE2 263 kg 0.16 42.08"
+    },
+    {
+     "doc": "batch_02/0002.eml#TX-US-2032-5441.pdf",
+     "page": 1,
+     "quote": "5 TE16812897 - Screening fee (adj.) (ref TE16812897) USC3-USE2 263 kg 0.16 42.08"
+    },
+    {
+     "doc": "batch_01/0002.eml#MSA-TBX-US-EXP-E61.pdf",
+     "page": 10,
+     "quote": "Code SEC: Security surcharge; also billed as: Screening fee, Screening fee (adj.), Security screening"
+    }
+   ],
+   "missing_doc": null,
+   "supersedes": [],
+   "learned_at": null
+  }
+ ],
+ "portfolio": {
+  "cashback": [],
+  "expiry": [],
+  "late_fee_risk": []
+ }
+}

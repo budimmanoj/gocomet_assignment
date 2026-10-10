@@ -1,0 +1,52 @@
+# One practice scenario and its expected answer after each batch.
+# verdict: finding | no_finding | conflict | cannot_determine. Decoys and clean controls are no_finding: leave them
+#   out of the report or list them with verdict no_finding.
+# in_totals: true only for verdict finding. bucket: which answer-sheet total the amount adds to (overcharge,
+#   duplicate, waived_but_billed, late_fee_not_owed, cashback_owed, late_fees_avoided; none for expiry and anything
+#   that is not a finding). total_overpayment = the first four; total_savings adds cashback_owed and late_fees_avoided.
+# by_batch.expect: absent = must not be in that report; as_above = the answer above. learned_at_required: true = the
+#   answer changed because of feedback (data/scenarios/feedback/), so the item must carry learned_at.
+# probes: [feedback] = a key the learning component scores. finding: the report.json item.
+# No worked calculation and no explanation here: data/examples/*/EXPLANATION.md teach every class.
+scenario: sc-1d5d4842
+key:
+  invoice_id: TX-US-2035-0251
+  class: duplicate
+class: duplicate
+variant: DU-05
+decoy: true
+clean: false
+probes: []
+feedback_links: []
+verdict: no_finding
+amount_usd: null
+amount_range: null
+deadline: null
+in_totals: false
+bucket: none
+action:
+  supervised: none
+  autonomous: none
+missing_doc: null
+evidence:
+- doc: batch_02/0020.eml#AWB-TX75680985.pdf
+  page: 1
+  quote: Total pieces 3 | Total chargeable weight 363 kg
+- doc: batch_02/0019.eml#TX-US-2035-0249.pdf
+  page: 1
+  quote: Air freight (MAWB TX75680985) TX75680985-H1 USE1-USW2 18 Jul 2035 724.23 117 kg 6.19
+- doc: batch_02/0020.eml#TX-US-2035-0251.pdf
+  page: 1
+  quote: 1 TX75680985-H2 2035-07-18 Air freight (MAWB TX75680985) USE1-USW2 246 kg 6.19 1522.74
+deciding_clause:
+  doc: batch_02/0020.eml#AWB-TX75680985.pdf
+  page: 1
+  quote: Total pieces 3 | Total chargeable weight 363 kg
+by_batch:
+- after_batch: batch_01
+  as_of: '2035-05-31'
+  expect: absent
+- after_batch: batch_02
+  as_of: '2035-09-30'
+  expect: as_above
+finding: null

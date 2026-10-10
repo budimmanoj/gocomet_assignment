@@ -1,0 +1,53 @@
+# One practice scenario and its expected answer after each batch.
+# verdict: finding | no_finding | conflict | cannot_determine. Decoys and clean controls are no_finding: leave them
+#   out of the report or list them with verdict no_finding.
+# in_totals: true only for verdict finding. bucket: which answer-sheet total the amount adds to (overcharge,
+#   duplicate, waived_but_billed, late_fee_not_owed, cashback_owed, late_fees_avoided; none for expiry and anything
+#   that is not a finding). total_overpayment = the first four; total_savings adds cashback_owed and late_fees_avoided.
+# by_batch.expect: absent = must not be in that report; as_above = the answer above. learned_at_required: true = the
+#   answer changed because of feedback (data/scenarios/feedback/), so the item must carry learned_at.
+# probes: [feedback] = a key the learning component scores. finding: the report.json item.
+# No worked calculation and no explanation here: data/examples/*/EXPLANATION.md teach every class.
+scenario: sc-e85d8676
+key:
+  invoice_id: TX-US-2035-0211
+  class: late_fee_not_owed
+class: late_fee_not_owed
+variant: LF-01
+decoy: true
+clean: false
+probes: []
+feedback_links: []
+verdict: no_finding
+amount_usd: null
+amount_range: null
+deadline: null
+in_totals: false
+bucket: none
+action:
+  supervised: none
+  autonomous: none
+missing_doc: null
+evidence:
+- doc: batch_01/0023.eml
+  page: 1
+  quote: We extend the due date of invoice TX-US-2035-0188 to 2035-04-03.
+- doc: batch_01/0041.eml#ap-register-2035-05-31.xlsx
+  page: 1
+  quote: TX-US-2035-0188 | 2035-01-22 | due 2035-03-08 | USD 4410.49 | paid | 2035-04-10
+- doc: batch_01/0033.eml#TX-US-2035-0211.pdf
+  page: 1
+  quote: '5 - - Late fee on TX-US-2035-0188: USD 4410.49 overdue, month 1 @ 1.98% - 1 month 1.98% 87.33'
+deciding_clause:
+  doc: batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf
+  page: 4
+  quote: 10.5 Extension of due date. A due date may be extended by written notice from the Carrier's Authorised Person (payment
+    terms); the extended date replaces the due date for clause 10.2.
+by_batch:
+- after_batch: batch_01
+  as_of: '2035-05-31'
+  expect: as_above
+- after_batch: batch_02
+  as_of: '2035-09-30'
+  expect: as_above
+finding: null

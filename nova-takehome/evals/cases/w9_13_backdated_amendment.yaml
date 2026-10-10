@@ -1,0 +1,12 @@
+name: backdated amendment
+mailbox: evals/mailboxes/w9_13_backdated_amendment
+as_of: '2041-08-31'
+mode: supervised
+expect:
+  key:
+    invoice_id: VF-41-0114
+    class: overcharge
+  verdict: finding
+  amount_usd: '53.33'
+  action: draft:dispute
+why: 'AMD-1 arrives in August, effective June: the June shipment is now overcharged'

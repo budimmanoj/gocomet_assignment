@@ -1,0 +1,45 @@
+{
+ "schema_version": "1.0",
+ "world": "W9",
+ "after_batch": "batch_01",
+ "decided_at": "2041-07-02T10:00:00Z",
+ "decided_by": {
+  "name": "Hana Sorel",
+  "role": "Head of Payables",
+  "entity": "OST-DE"
+ },
+ "items": [
+  {
+   "item_id": "fb-e15",
+   "finding_key": {
+    "invoice_id": "VF-41-0116",
+    "class": "waived_but_billed"
+   },
+   "solicited": true,
+   "decision": "confirm",
+   "fact": {
+    "type": "sender_authority",
+    "subject": {
+     "person": "Lotte Haas",
+     "party": "VLM-DE"
+    },
+    "value": {
+     "categories": [
+      "waivers"
+     ]
+    },
+    "evidence": "Delegation letter"
+   },
+   "scope": {
+    "kind": "standing",
+    "applies_to": {
+     "contract_id": "VLM-DE-AIR-07",
+     "person": "Lotte Haas",
+     "category": "waivers"
+    },
+    "valid_from": "2041-06-01",
+    "valid_to": null
+   }
+  }
+ ]
+}

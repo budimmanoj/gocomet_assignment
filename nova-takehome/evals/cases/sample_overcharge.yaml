@@ -1,0 +1,12 @@
+name: wrong rate on one freight line
+mailbox: data/examples/overcharge/docs
+as_of: '2032-08-31'
+mode: supervised
+expect:
+  key:
+    invoice_id: TX-US-2032-5394
+    class: overcharge
+  verdict: finding
+  amount_usd: '196.92'
+  action: draft:dispute
+why: see data/examples/overcharge/EXPLANATION.md

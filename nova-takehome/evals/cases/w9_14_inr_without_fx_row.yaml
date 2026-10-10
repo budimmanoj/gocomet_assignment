@@ -1,0 +1,12 @@
+name: inr without fx row
+mailbox: evals/mailboxes/w9_14_inr_without_fx_row
+as_of: '2041-07-31'
+mode: supervised
+expect:
+  key:
+    invoice_id: VF-41-0115
+    class: overcharge
+  verdict: cannot_determine
+  missing_doc: Annex F
+  action: draft:request_document
+why: 'June 2041 has no Annex F row: cannot convert, ask Treasury'

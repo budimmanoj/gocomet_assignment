@@ -1,0 +1,13 @@
+name: duplicate different amount
+mailbox: evals/mailboxes/w9_17_duplicate_different_amount
+as_of: '2041-07-31'
+mode: supervised
+expect:
+  key:
+    invoice_id: VF-41-0118
+    class: duplicate
+  verdict: finding
+  amount_usd: '645.00'
+  action: draft:dispute
+why: AWB VF20000017 freight billed in May and again in June at 4.30; the June line
+  is a second charge for one shipment

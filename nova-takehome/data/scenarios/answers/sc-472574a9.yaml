@@ -1,0 +1,80 @@
+# One practice scenario and its expected answer after each batch.
+# verdict: finding | no_finding | conflict | cannot_determine. Decoys and clean controls are no_finding: leave them
+#   out of the report or list them with verdict no_finding.
+# in_totals: true only for verdict finding. bucket: which answer-sheet total the amount adds to (overcharge,
+#   duplicate, waived_but_billed, late_fee_not_owed, cashback_owed, late_fees_avoided; none for expiry and anything
+#   that is not a finding). total_overpayment = the first four; total_savings adds cashback_owed and late_fees_avoided.
+# by_batch.expect: absent = must not be in that report; as_above = the answer above. learned_at_required: true = the
+#   answer changed because of feedback (data/scenarios/feedback/), so the item must carry learned_at.
+# probes: [feedback] = a key the learning component scores. finding: the report.json item.
+# No worked calculation and no explanation here: data/examples/*/EXPLANATION.md teach every class.
+scenario: sc-472574a9
+key:
+  invoice_id: TX-US-2034-0383
+  class: waived_but_billed
+class: waived_but_billed
+variant: WB-01
+decoy: false
+clean: false
+probes: []
+feedback_links: []
+verdict: finding
+amount_usd: '116.13'
+amount_range: null
+deadline: null
+in_totals: true
+bucket: waived_but_billed
+action:
+  supervised: draft:dispute
+  autonomous: execute:dispute
+missing_doc: null
+evidence:
+- doc: batch_01/0004.eml
+  page: 1
+  quote: Following our call, we waive the Delivery fee on AWB TX45998993.
+- doc: batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf
+  page: 11
+  quote: 'Signe Underhill, Customer Finance Lead, TBX-US: waivers, payment_terms <signe.underhill@tarrowby.example>'
+- doc: batch_01/0006.eml#TX-US-2034-0383.pdf
+  page: 1
+  quote: 5 TX45998993 2034-11-19 Delivery fee USE1-USW2 1 shpt 116.13 116.13
+deciding_clause:
+  doc: batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf
+  page: 4
+  quote: 11.1 Waiver authority. A charge may be waived only in writing by a person listed in Schedule 1 for waivers. Schedule
+    1 is exhaustive.
+by_batch:
+- after_batch: batch_01
+  as_of: '2035-05-31'
+  expect: as_above
+- after_batch: batch_02
+  as_of: '2035-09-30'
+  expect: as_above
+finding:
+  id: waived_but_billed:TX-US-2034-0383
+  class: waived_but_billed
+  variant: WB-01
+  invoice_id: TX-US-2034-0383
+  verdict: finding
+  amount_usd: '116.13'
+  amount_range: null
+  deadline: null
+  action: draft:dispute
+  confidence: 0.95
+  evidence:
+  - doc: batch_01/0004.eml
+    page: 1
+    quote: Following our call, we waive the Delivery fee on AWB TX45998993.
+  - doc: batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf
+    page: 11
+    quote: 'Signe Underhill, Customer Finance Lead, TBX-US: waivers, payment_terms <signe.underhill@tarrowby.example>'
+  - doc: batch_01/0006.eml#TX-US-2034-0383.pdf
+    page: 1
+    quote: 5 TX45998993 2034-11-19 Delivery fee USE1-USW2 1 shpt 116.13 116.13
+  - doc: batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf
+    page: 4
+    quote: 11.1 Waiver authority. A charge may be waived only in writing by a person listed in Schedule 1 for waivers. Schedule
+      1 is exhaustive.
+  missing_doc: null
+  supersedes: []
+  learned_at: null

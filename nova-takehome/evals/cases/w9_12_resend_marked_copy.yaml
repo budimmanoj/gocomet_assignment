@@ -1,0 +1,10 @@
+name: resend marked copy
+mailbox: evals/mailboxes/w9_12_resend_marked_copy
+as_of: '2041-07-31'
+mode: supervised
+expect:
+  key:
+    invoice_id: VF-41-0113
+    class: duplicate
+  verdict: no_finding
+why: the second copy says 'copy for your records'; nothing asks to pay twice

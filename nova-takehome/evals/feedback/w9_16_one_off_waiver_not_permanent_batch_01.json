@@ -1,0 +1,43 @@
+{
+ "schema_version": "1.0",
+ "world": "W9",
+ "after_batch": "batch_01",
+ "decided_at": "2041-07-02T10:00:00Z",
+ "decided_by": {
+  "name": "Hana Sorel",
+  "role": "Head of Payables",
+  "entity": "OST-DE"
+ },
+ "items": [
+  {
+   "item_id": "fb-e16",
+   "finding_key": {
+    "invoice_id": "VF-ST-4105",
+    "class": "waived_but_billed"
+   },
+   "solicited": true,
+   "decision": "one_off_approval",
+   "fact": {
+    "type": "waiver_scope",
+    "subject": {
+     "person": "Ilka Brandt",
+     "party": "VLM-DE"
+    },
+    "value": {
+     "months": [
+      "2041-05"
+     ]
+    },
+    "evidence": "Confirmed by phone"
+   },
+   "scope": {
+    "kind": "one_off",
+    "applies_to": {
+     "invoice_id": "VF-ST-4105"
+    },
+    "valid_from": "2041-07-02",
+    "valid_to": null
+   }
+  }
+ ]
+}

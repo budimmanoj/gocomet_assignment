@@ -1,0 +1,14 @@
+name: amendment and rate notice disagree
+mailbox: data/examples/conflict/docs
+as_of: '2032-11-30'
+mode: supervised
+expect:
+  key:
+    invoice_id: TX-US-2032-5166
+    class: overcharge
+  verdict: conflict
+  amount_range:
+  - '0.00'
+  - '20.87'
+  action: escalate
+why: see data/examples/conflict/EXPLANATION.md

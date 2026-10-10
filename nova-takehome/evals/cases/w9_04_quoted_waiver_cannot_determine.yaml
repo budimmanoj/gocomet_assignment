@@ -1,0 +1,12 @@
+name: quoted waiver cannot determine
+mailbox: evals/mailboxes/w9_04_quoted_waiver_cannot_determine
+as_of: '2041-07-31'
+mode: supervised
+expect:
+  key:
+    invoice_id: VF-41-0104
+    class: waived_but_billed
+  verdict: cannot_determine
+  missing_doc: original email
+  action: draft:request_document
+why: Runa Falk's waiver is only quoted inside Hana's own email

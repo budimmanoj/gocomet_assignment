@@ -1,0 +1,46 @@
+{
+ "as_of": "2032-11-30",
+ "mode": "supervised",
+ "findings": [
+  {
+   "id": "overcharge:TX-US-2032-5166",
+   "class": "overcharge",
+   "variant": "XC-01",
+   "invoice_id": "TX-US-2032-5166",
+   "verdict": "conflict",
+   "amount_usd": null,
+   "amount_range": [
+    "0.00",
+    "20.87"
+   ],
+   "deadline": null,
+   "action": "escalate",
+   "confidence": 0.9,
+   "evidence": [
+    {
+     "doc": "batch_01/0003.eml#TBX-US-EXP-E90-AMD-1.pdf",
+     "page": 1,
+     "quote": "USW1-USC3 100-299.5 kg 2.88 USD"
+    },
+    {
+     "doc": "batch_02/0001.eml",
+     "page": 1,
+     "quote": "USW1-USC3 100-299.5 kg: 3.03 USD"
+    },
+    {
+     "doc": "batch_01/0002.eml#MSA-TBX-US-EXP-E90.pdf",
+     "page": 4,
+     "quote": "13.3 Unranked instruments. Where a rate notice under clause 3.5 and an amendment state different rates for the same lane and period, the parties shall resolve the difference jointly; neither prevails automatically."
+    }
+   ],
+   "missing_doc": null,
+   "supersedes": [],
+   "learned_at": null
+  }
+ ],
+ "portfolio": {
+  "cashback": [],
+  "expiry": [],
+  "late_fee_risk": []
+ }
+}

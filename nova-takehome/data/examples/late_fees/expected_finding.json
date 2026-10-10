@@ -1,0 +1,85 @@
+{
+ "as_of": "2033-02-28",
+ "mode": "supervised",
+ "findings": [
+  {
+   "id": "late_fee_not_owed:TX-US-2032-5496",
+   "class": "late_fee_not_owed",
+   "variant": "LF-01",
+   "invoice_id": "TX-US-2032-5496",
+   "verdict": "finding",
+   "amount_usd": "12.65",
+   "amount_range": null,
+   "deadline": null,
+   "action": "draft:dispute",
+   "confidence": 0.95,
+   "evidence": [
+    {
+     "doc": "batch_01/0005.eml",
+     "page": 1,
+     "quote": "We extend the due date of invoice TX-US-2032-5494 to 2032-08-25."
+    },
+    {
+     "doc": "batch_01/0008.eml#ap-register-2032-08-31.xlsx",
+     "page": 1,
+     "quote": "TX-US-2032-5494 | 2032-06-26 | due 2032-08-10 | USD 680.12 | paid | 2032-08-17"
+    },
+    {
+     "doc": "batch_01/0006.eml#TX-US-2032-5496.pdf",
+     "page": 1,
+     "quote": "13 - - Late fee on TX-US-2032-5494: USD 680.12 overdue, month 1 @ 1.86% - 1 month 1.86% 12.65"
+    },
+    {
+     "doc": "batch_01/0002.eml#MSA-TBX-US-EXP-E42.pdf",
+     "page": 4,
+     "quote": "10.5 Extension of due date. A due date may be extended by written notice from the Carrier's Authorised Person (payment terms); the extended date replaces the due date for clause 10.2."
+    }
+   ],
+   "missing_doc": null,
+   "supersedes": [],
+   "learned_at": null
+  },
+  {
+   "id": "late_fee_not_owed:TX-US-2033-5582",
+   "class": "late_fee_not_owed",
+   "variant": "LF-01",
+   "invoice_id": "TX-US-2033-5582",
+   "verdict": "no_finding",
+   "amount_usd": null,
+   "amount_range": null,
+   "deadline": null,
+   "action": "none",
+   "confidence": 0.9,
+   "evidence": [
+    {
+     "doc": "batch_02/0002.eml",
+     "page": 1,
+     "quote": "We extend the due date of invoice TX-US-2032-5498 to 2032-12-12."
+    },
+    {
+     "doc": "batch_02/0006.eml#ap-register-2033-02-28.xlsx",
+     "page": 1,
+     "quote": "TX-US-2032-5498 | 2032-10-03 | due 2032-11-17 | USD 4200.07 | paid | 2033-01-01"
+    },
+    {
+     "doc": "batch_02/0003.eml#TX-US-2033-5582.pdf",
+     "page": 1,
+     "quote": "11 - - Late fee on TX-US-2032-5498: USD 4200.07 overdue, month 1 @ 1.86% - 1 month 1.86% 78.12"
+    },
+    {
+     "doc": "batch_01/0002.eml#MSA-TBX-US-EXP-E42.pdf",
+     "page": 4,
+     "quote": "10.5 Extension of due date. A due date may be extended by written notice from the Carrier's Authorised Person (payment terms); the extended date replaces the due date for clause 10.2."
+    }
+   ],
+   "missing_doc": null,
+   "supersedes": [],
+   "learned_at": null
+  }
+ ],
+ "portfolio": {
+  "cashback": [],
+  "expiry": [],
+  "late_fee_risk": []
+ }
+}

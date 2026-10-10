@@ -1,0 +1,12 @@
+name: one off waiver not permanent
+mailbox: evals/mailboxes/w9_16_one_off_waiver_not_permanent
+as_of: '2041-07-31'
+mode: supervised
+expect:
+  key:
+    invoice_id: VF-ST-4106
+    class: waived_but_billed
+  verdict: no_finding
+why: May's fee was approved as a one-off; June's statement is owed
+feedback:
+  batch_01: evals/feedback/w9_16_one_off_waiver_not_permanent_batch_01.json

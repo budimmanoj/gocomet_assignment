@@ -1,0 +1,12 @@
+name: new layout wrong band
+mailbox: evals/mailboxes/w9_01_new_layout_wrong_band
+as_of: '2041-07-31'
+mode: supervised
+expect:
+  key:
+    invoice_id: VF-41-0101
+    class: overcharge
+  verdict: finding
+  amount_usd: '113.76'
+  action: draft:dispute
+why: 120 kg sits in 100-299.5 (4.10); billed 4.90 on a layout we never saw

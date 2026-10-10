@@ -1,0 +1,153 @@
+{
+ "harness": "D:/projects/gocomet2/nova-takehome/.venv/Scripts/python.exe harness/harness.py",
+ "passed": 24,
+ "total": 24,
+ "your_cases": 22,
+ "score": 1.0,
+ "cases": [
+  {
+   "case": "ex_duplicate_autonomous_no_contract.yaml",
+   "name": "paid invoice re-sent for payment, autonomous, no MSA in the mailbox",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "sample_conflict.yaml",
+   "name": "amendment and rate notice disagree",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "sample_overcharge.yaml",
+   "name": "wrong rate on one freight line",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_01_new_layout_wrong_band.yaml",
+   "name": "new layout wrong band",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_02_band_edge_clean.yaml",
+   "name": "band edge clean",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_03_waiver_wrong_person.yaml",
+   "name": "waiver wrong person",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_04_quoted_waiver_cannot_determine.yaml",
+   "name": "quoted waiver cannot determine",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_05_injection_ignored.yaml",
+   "name": "injection ignored",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_06_storage_days.yaml",
+   "name": "storage days",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_07_delivery_not_performed.yaml",
+   "name": "delivery not performed",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_08_peak_out_of_season.yaml",
+   "name": "peak out of season",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_09_late_fee_simple_interest.yaml",
+   "name": "late fee simple interest",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_10_expiry_notice_deadline.yaml",
+   "name": "expiry notice deadline",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_11_duplicate_partly_credited.yaml",
+   "name": "duplicate partly credited",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_12_resend_marked_copy.yaml",
+   "name": "resend marked copy",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_13_backdated_amendment.yaml",
+   "name": "backdated amendment",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_14_inr_without_fx_row.yaml",
+   "name": "inr without fx row",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_15_feedback_confirms_authority.yaml",
+   "name": "feedback confirms authority",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_16_one_off_waiver_not_permanent.yaml",
+   "name": "one off waiver not permanent",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_17_duplicate_different_amount.yaml",
+   "name": "duplicate different amount",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_18_rebill_after_full_credit.yaml",
+   "name": "rebill after full credit",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_19_injection_paraphrased.yaml",
+   "name": "injection paraphrased",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_20_renewal_rolls_over.yaml",
+   "name": "renewal rolls over",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "w9_21_rebate_inr_without_fx_row.yaml",
+   "name": "rebate inr without fx row",
+   "pass": true,
+   "diff": []
+  }
+ ]
+}

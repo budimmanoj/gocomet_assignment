@@ -1,0 +1,294 @@
+{
+ "schema_version": "1.0",
+ "as_of": "2035-05-31",
+ "mode": "autonomous",
+ "findings": [
+  {
+   "id": "duplicate:TX-US-2034-0386",
+   "class": "duplicate",
+   "invoice_id": "TX-US-2034-0386",
+   "verdict": "finding",
+   "amount_usd": "1363.36",
+   "amount_range": null,
+   "deadline": null,
+   "action": "execute:dispute",
+   "confidence": 0.9,
+   "evidence": [
+    {
+     "doc": "batch_01/0041.eml#ap-register-2035-05-31.xlsx",
+     "page": 1,
+     "quote": "TX-US-2034-0386 | 2034-12-31 | due 2035-02-14 | USD 1363.36 | paid | 2035-01-18"
+    },
+    {
+     "doc": "batch_01/0016.eml",
+     "page": 1,
+     "quote": "Our records show invoice TX-US-2034-0386 as outstanding."
+    },
+    {
+     "doc": "batch_01/0016.eml#TX-US-2034-0386.pdf",
+     "page": 1,
+     "quote": "Total USD 1363.36"
+    }
+   ],
+   "missing_doc": null,
+   "recipient": "joaquin.rathbone@tarrowby.example",
+   "supersedes": [],
+   "learned_at": null
+  },
+  {
+   "id": "late_fee_not_owed:TX-US-2035-0215",
+   "class": "late_fee_not_owed",
+   "invoice_id": "TX-US-2035-0215",
+   "verdict": "finding",
+   "amount_usd": "13.54",
+   "amount_range": null,
+   "deadline": null,
+   "action": "execute:dispute",
+   "confidence": 0.9,
+   "evidence": [
+    {
+     "doc": "batch_01/0038.eml#TX-US-2035-0215.pdf",
+     "page": 1,
+     "quote": "14 - - Late fee on TX-US-2035-0202: USD 683.82 overdue, month 1 @ 1.98% - 1 month 1.98% 13.54"
+    },
+    {
+     "doc": "batch_01/0032.eml",
+     "page": 1,
+     "quote": "We extend the due date of invoice TX-US-2035-0202 to 2035-05-07."
+    },
+    {
+     "doc": "batch_01/0041.eml#ap-register-2035-05-31.xlsx",
+     "page": 1,
+     "quote": "TX-US-2035-0202 | 2035-03-10 | due 2035-04-24 | USD 683.82 | paid | 2035-05-01"
+    },
+    {
+     "doc": "batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf",
+     "page": 4,
+     "quote": "10.2 Late fee. Undisputed amounts unpaid more than 0 days after the due date bear a late fee of 1.98% per month or part thereof."
+    },
+    {
+     "doc": "batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf",
+     "page": 4,
+     "quote": "10.5 Extension of due date."
+    }
+   ],
+   "missing_doc": null,
+   "recipient": "joaquin.rathbone@tarrowby.example",
+   "supersedes": [],
+   "learned_at": null
+  },
+  {
+   "id": "overcharge:TX-US-2035-0198",
+   "class": "overcharge",
+   "invoice_id": "TX-US-2035-0198",
+   "verdict": "finding",
+   "amount_usd": "124.02",
+   "amount_range": null,
+   "deadline": null,
+   "action": "execute:dispute",
+   "confidence": 0.92,
+   "evidence": [
+    {
+     "doc": "batch_01/0022.eml#TX-US-2035-0198.pdf",
+     "page": 1,
+     "quote": "5 TX64694457 2035-02-24 DG handling USS2-INW2 1 shpt 124.02 124.02"
+    },
+    {
+     "doc": "batch_01/0022.eml#DGD-TX64694457.pdf",
+     "page": 1,
+     "quote": "UN1845 Dry ice 5.5 kg - refrigerant only"
+    },
+    {
+     "doc": "batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf",
+     "page": 3,
+     "quote": "5.2 Dry ice. Dry ice (UN1845) used solely as a refrigerant for non-dangerous goods is billed at the Dry Ice Handling Fee in"
+    },
+    {
+     "doc": "batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf",
+     "page": 4,
+     "quote": "5.3 Mixed shipments. Where a shipment contains dangerous goods other than dry ice, only the DG Fee applies (not both)."
+    }
+   ],
+   "missing_doc": null,
+   "recipient": "joaquin.rathbone@tarrowby.example",
+   "supersedes": [],
+   "learned_at": null
+  },
+  {
+   "id": "overcharge:TX-US-2035-0204",
+   "class": "overcharge",
+   "invoice_id": "TX-US-2035-0204",
+   "verdict": "finding",
+   "amount_usd": "88.96",
+   "amount_range": null,
+   "deadline": null,
+   "action": "execute:dispute",
+   "confidence": 0.92,
+   "evidence": [
+    {
+     "doc": "batch_01/0027.eml#TX-US-2035-0204.pdf",
+     "page": 1,
+     "quote": "1 TX67932891 2035-03-18 Air freight USS2-INW2 244 kg 3.14 766.16"
+    },
+    {
+     "doc": "batch_01/0027.eml#TX-US-2035-0204.pdf",
+     "page": 1,
+     "quote": "2 TX67932891 2035-03-18 Fuel surcharge USS2-INW2 766.16 21.53% 164.95"
+    },
+    {
+     "doc": "batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf",
+     "page": 8,
+     "quote": "USS2-INW2 100-299.5 kg 2.84 2.83"
+    },
+    {
+     "doc": "batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf",
+     "page": 3,
+     "quote": "3.2 Pricing date. Each shipment is priced at the rates, surcharges and fees in force on its Pickup Date."
+    },
+    {
+     "doc": "batch_01/0040.eml#tracking-2034-10-01.xlsx",
+     "page": 1,
+     "quote": "TX67932891 | PICKED_UP | 2035-03-18 | USS2 | -"
+    },
+    {
+     "doc": "batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf",
+     "page": 9,
+     "quote": "2035-03 21.53%"
+    },
+    {
+     "doc": "batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf",
+     "page": 3,
+     "quote": "4.1 Fuel surcharge. Fuel surcharge is the Annex C percentage for the month of the Pickup Date, applied to the base freight charge only."
+    }
+   ],
+   "missing_doc": null,
+   "recipient": "joaquin.rathbone@tarrowby.example",
+   "supersedes": [],
+   "learned_at": null
+  },
+  {
+   "id": "overcharge:TX-US-2035-0210",
+   "class": "overcharge",
+   "invoice_id": "TX-US-2035-0210",
+   "verdict": "finding",
+   "amount_usd": "36.07",
+   "amount_range": null,
+   "deadline": null,
+   "action": "execute:dispute",
+   "confidence": 0.92,
+   "evidence": [
+    {
+     "doc": "batch_01/0034.eml#TX-US-2035-0210.pdf",
+     "page": 1,
+     "quote": "1 TX13648356 2035-04-10 Air freight USC3-INS1 91 kg 5.03 457.73"
+    },
+    {
+     "doc": "batch_01/0034.eml#TX-US-2035-0210.pdf",
+     "page": 1,
+     "quote": "2 TX13648356 2035-04-10 Fuel surcharge USC3-INS1 457.73 23.87% 109.26"
+    },
+    {
+     "doc": "batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf",
+     "page": 8,
+     "quote": "USC3-INS1 45-99.5 kg 4.71 4.69"
+    },
+    {
+     "doc": "batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf",
+     "page": 3,
+     "quote": "3.2 Pricing date. Each shipment is priced at the rates, surcharges and fees in force on its Pickup Date."
+    },
+    {
+     "doc": "batch_01/0040.eml#tracking-2034-10-01.xlsx",
+     "page": 1,
+     "quote": "TX13648356 | PICKED_UP | 2035-04-10 | USC3 | -"
+    },
+    {
+     "doc": "batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf",
+     "page": 9,
+     "quote": "2035-04 23.87%"
+    },
+    {
+     "doc": "batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf",
+     "page": 3,
+     "quote": "4.1 Fuel surcharge. Fuel surcharge is the Annex C percentage for the month of the Pickup Date, applied to the base freight charge only."
+    }
+   ],
+   "missing_doc": null,
+   "recipient": "joaquin.rathbone@tarrowby.example",
+   "supersedes": [],
+   "learned_at": null
+  },
+  {
+   "id": "waived_but_billed:TX-US-2034-0383",
+   "class": "waived_but_billed",
+   "invoice_id": "TX-US-2034-0383",
+   "verdict": "finding",
+   "amount_usd": "116.13",
+   "amount_range": null,
+   "deadline": null,
+   "action": "execute:dispute",
+   "confidence": 0.93,
+   "evidence": [
+    {
+     "doc": "batch_01/0004.eml",
+     "page": 1,
+     "quote": "Following our call, we waive the Delivery fee on AWB TX45998993."
+    },
+    {
+     "doc": "batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf",
+     "page": 11,
+     "quote": "Signe Underhill, Customer Finance Lead, TBX-US: waivers, payment_terms <signe.underhill@tarrowby.example>"
+    },
+    {
+     "doc": "batch_01/0006.eml#TX-US-2034-0383.pdf",
+     "page": 1,
+     "quote": "5 TX45998993 2034-11-19 Delivery fee USE1-USW2 1 shpt 116.13 116.13"
+    },
+    {
+     "doc": "batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf",
+     "page": 4,
+     "quote": "11.1 Waiver authority. A charge may be waived only in writing by a person listed in Schedule 1 for waivers."
+    }
+   ],
+   "missing_doc": null,
+   "recipient": "joaquin.rathbone@tarrowby.example",
+   "supersedes": [],
+   "learned_at": null
+  }
+ ],
+ "portfolio": {
+  "cashback": [
+   {
+    "id": "cashback:TBX-US-EXP-01/2035-Q1/rebate",
+    "class": "cashback",
+    "contract_id": "TBX-US-EXP-01",
+    "period": "2035-Q1",
+    "credit_type": "rebate",
+    "verdict": "finding",
+    "amount_usd": "4450.07",
+    "amount_range": null,
+    "deadline": null,
+    "action": "execute:claim_credit",
+    "confidence": 0.85,
+    "evidence": [
+     {
+      "doc": "batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf",
+      "page": 4,
+      "quote": "7.1 Volume rebate. The Carrier shall credit a rebate on each Quarter's Qualifying Spend (QS) at the tier reached: QS >= USD 79,000.00: 5%; QS >= USD 120,000.00: 7.5%; QS >= USD 202,000.00: 10%. The tier rate applies to all QS in the Quarter."
+     },
+     {
+      "doc": "batch_01/0001.eml#MSA-TBX-US-EXP-01.pdf",
+      "page": 3,
+      "quote": "1.1 Qualifying Spend. Qualifying Spend means freight charges (base freight, fuel, security surcharge and Annex D accessorials) on invoices dated in the period, net of all credit notes dated in the period whatever invoice they reference (rebate and improvement credits excepted). It excludes taxes (sales tax, GST), duties and disbursements, late fees, and rebate or improvement credits. INR amounts are converted per invoice at the Annex F rate for the month of the invoice date."
+     }
+    ],
+    "missing_doc": null,
+    "recipient": "joaquin.rathbone@tarrowby.example",
+    "supersedes": [],
+    "learned_at": null
+   }
+  ],
+  "expiry": [],
+  "late_fee_risk": []
+ }
+}
